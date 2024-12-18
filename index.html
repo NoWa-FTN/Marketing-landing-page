@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Bienvenue sur notre site !</h1>
+            <br>
+            <p class="subtitle">Découvrez nos services incroyables et rejoignez-nous dès maintenant.</p>
+            <br>
+            <br>
+            <a href="#about" class="btn btn-primary">En savoir plus</a>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">À propos de nous</h2>
+            <p class="section-description">Nous créons des expériences uniques grâce à des solutions innovantes et des designs modernes.</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>Qualité</h3>
+                    <p>Des services de haute qualité, taillés sur mesure pour vos besoins.</p>
+                </div>
+                <div class="card">
+                    <h3>Innovation</h3>
+                    <p>Des idées nouvelles pour chaque projet, à chaque étape.</p>
+                </div>
+                <div class="card">
+                    <h3>Support</h3>
+                    <p>Une équipe dédiée pour vous accompagner à tout moment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <h2 class="section-title">Inscrivez-vous à notre newsletter</h2>
+            <p class="section-description">Restez informé(e) des dernières actualités et offres exclusives en vous inscrivant à notre newsletter.</p>
+            <form id="newsletter-form" class="form">
+                <input type="text" id="firstname" name="firstname" placeholder="Entrez votre prénom" required>
+                <input type="text" id="lastname" name="lastname" placeholder="Entrez votre nom" required>
+                <input type="text" id="pseudo" name="pseudo" placeholder="Entrez votre pseudo" required>
+                <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+                <button type="submit" class="btn btn-primary">S'inscrire</button>
+            </form>
+            <p id="form-message" class="form-message"></p>
+        </div>
+    </section>    
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 NoWa-FTN. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
