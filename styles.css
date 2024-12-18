@@ -38,6 +38,8 @@ body {
 
 .header .btn:hover {
     transform: scale(1.1);
+    background-color: #ec4f91;
+    transition: background-color 0.3s;
 }
 
 .about {
@@ -99,12 +101,12 @@ body {
 
 .newsletter input:focus {
     outline: none;
-    border-color: #2575fc;
+    border-color: #ff7eb3;
 }
 
 .newsletter .btn {
     padding: 10px 20px;
-    background: #2575fc;
+    background: #ff7eb3;
     color: white;
     border: none;
     border-radius: 5px;
@@ -114,7 +116,7 @@ body {
 }
 
 .newsletter .btn:hover {
-    background-color: #1d5ec4;
+    background-color: #ec4f91;
 }
 
 .newsletter {
