@@ -9,13 +9,18 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <h1 class="title">Bienvenue sur NoWa-Vation !</h1>
-            <br>
-            <p class="subtitle">Découvrez nos services de création de site web incroyables et rejoignez-nous dès maintenant.</p>
-            <br>
-            <br>
-            <a href="#about" class="btn btn-primary">En savoir plus</a>
+        <div class="container header-content">
+            <div class="text-content">
+                <h1 class="title">Bienvenue sur NoWa-Vation !</h1>
+                <br>
+                <p class="subtitle">Découvrez nos services de création de site web incroyables et rejoignez-nous dès maintenant.</p>
+                <br>
+                <br>
+                <a href="#about" class="btn btn-primary">En savoir plus</a>
+            </div>
+            <div class="image-content">
+                <img src="logo.png" alt="Logo" style="width: 200px;">
+            </div>
         </div>
     </header>
 
@@ -43,7 +48,7 @@
     <section id="newsletter" class="newsletter">
         <div class="container">
             <h2 class="section-title">Inscrivez-vous à notre newsletter</h2>
-            <p class="section-description">Restez informé(e) des dernières actualités et offres exclusives en vous inscrivant à notre newsletter ! <br>(On est pas aussi drôle que Burger King mais ça vaut le coup 😉)</p>
+            <p class="section-description">Restez informé(e) des dernières actualités et offres exclusives en vous inscrivant à notre newsletter.</p>
             <form id="newsletter-form" class="form">
                 <input type="text" id="firstname" name="firstname" placeholder="Entrez votre prénom" required>
                 <input type="text" id="lastname" name="lastname" placeholder="Entrez votre nom" required>
@@ -52,9 +57,25 @@
                 <button type="submit" class="btn btn-primary">S'inscrire</button>
             </form>
             <p id="form-message" class="form-message"></p>
+            <p class="rgpd-notice">Nous respectons la <a href="#privacy-policy" class="rgpd-link">réglementation RGPD</a>. Vos données resteront confidentielles et ne seront utilisées que pour nos communications liées à la newsletter.</p>
+            <section id="privacy-policy" class="privacy-policy">
+                <div class="container">
+                    <h2 class="section-title">Politique de Confidentialité</h2>
+                    <p class="section-description">
+                        Conformément à la réglementation RGPD, nous nous engageons à protéger vos données personnelles.
+                        Vos informations seront utilisées uniquement pour vous fournir des communications pertinentes
+                        et ne seront jamais partagées avec des tiers sans votre consentement explicite.
+                    </p>
+                    <p>
+                        Si vous souhaitez en savoir plus sur la gestion de vos données ou exercer vos droits (accès,
+                        rectification, suppression, etc.), vous pouvez nous contacter à l'adresse suivante :
+                        <a href="mailto:contact@votresite.com">contact-info@nowa-vation.com</a>.
+                    </p>
+                </div>
+            </section>
         </div>
-    </section>    
-
+    </section>     
+    
     <footer class="footer">
         <div class="container">
             <p>© 2024 NoWa-FTN. Tous droits réservés.</p>

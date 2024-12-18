@@ -9,8 +9,38 @@ body {
 .header {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
-    text-align: center;
+    text-align: left;
     padding: 100px 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Centrage vertical */
+    justify-content: space-between; /* Texte à gauche, image à droite */
+    gap: 20px; /* Espacement entre le texte et l'image */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-content {
+    max-width: 600px;
+}
+
+.text-content .title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.text-content .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 50px;
+    object-fit: contain; /* Assure une bonne mise à l'échelle de l'image */
 }
 
 .header .title {
@@ -128,6 +158,51 @@ body {
     margin-top: 20px;
     font-size: 1rem;
     color: #333;
+}
+
+/* RGPD Notice */
+.rgpd-notice {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+.rgpd-notice .rgpd-link {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.rgpd-notice .rgpd-link:hover {
+    text-decoration: underline;
+}
+
+/* Privacy Policy Section */
+.privacy-policy {
+    background: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.privacy-policy .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.privacy-policy .section-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.privacy-policy a {
+    color: #2575fc;
+    text-decoration: none;
+}
+
+.privacy-policy a:hover {
+    text-decoration: underline;
 }
 
 @keyframes fadeIn {
