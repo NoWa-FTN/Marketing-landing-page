@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("webinar-form");
+    const form = document.getElementById("download-form");
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
     const rgpdCheckbox = document.getElementById("rgpd-checkbox");
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             message.textContent = "⚠️ Vous devez accepter la politique de confidentialité.";
             message.style.color = "red";
         } else {
-            message.textContent = `✅ Merci ${name}, votre inscription est confirmée pour le webinaire !`;
+            message.textContent = `✅ Merci ${name}, votre téléchargement est prêt !`;
             message.style.color = "green";
             nameInput.value = "";
             emailInput.value = "";

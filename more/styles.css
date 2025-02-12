@@ -1,0 +1,128 @@
+/* Global */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    background-color: #1d3557;
+    padding: 60px 20px;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.text-content {
+    max-width: 600px;
+}
+
+.text-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.header-image {
+    width: 350px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Form Section */
+.form-section {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    font-size: 2.2rem;
+    color: #1d3557;
+}
+
+.form-container p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00adb5;
+}
+
+/* Case RGPD */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.rgpd-link {
+    color: #00adb5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.rgpd-link:hover {
+    text-decoration: underline;
+}
+
+/* Bouton */
+.btn {
+    background: #00adb5;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #008a97;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background-color: #1d3557;
+    color: white;
+    padding: 20px;
+}

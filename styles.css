@@ -1,220 +1,264 @@
-/* styles.css */
+/* Global */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #ecf0f1;
+    background: linear-gradient(45deg, #0066ff, #ff7f50, #00adb5); /* Gradient avec des couleurs modernes */
+    background-size: 300% 300%;
+    animation: gradientBackground 10s ease infinite; /* Animation de changement de gradient */
+    text-align: center;
+    overflow-x: hidden;
 }
 
+/* HEADER */
 .header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
-    text-align: left;
-    padding: 100px 20px;
+    position: relative; /* Positionner les éléments de manière relative pour les éléments absolus à l'intérieur */
+    display: flex;
+    justify-content: space-between; /* Répartir les éléments entre le logo et le texte */
+    align-items: center; /* Alignement vertical centré */
+    padding: 20px 10%; /* Espacement autour du contenu pour le rendre plus aéré */
+    background-color: #fff; /* Couleur de fond claire */
 }
 
+/* Logo positionné en haut à gauche */
+.logo-container {
+    position: absolute;
+    top: 20px; /* Espacement du logo par rapport au haut de l'écran */
+    left: 20px; /* Espacement du logo par rapport à la gauche */
+}
+
+.logo {
+    max-width: 240px; /* Taille ajustée du logo */
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Contenu du header */
 .header-content {
     display: flex;
-    align-items: center; /* Centrage vertical */
-    justify-content: space-between; /* Texte à gauche, image à droite */
-    gap: 20px; /* Espacement entre le texte et l'image */
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Disposer le texte et le bouton sous forme de colonne */
 }
 
-.text-content {
-    max-width: 600px;
-}
-
-.text-content .title {
-    font-size: 2.5rem;
+.text-content h1 {
+    font-size: 2.8rem;
+    color: #00adb5; /* Couleur d'accentuation */
     margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-.text-content .subtitle {
+.text-content p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: #333;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-content .btn {
+    background: linear-gradient(135deg, #00adb5, #007c83);
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.text-content .btn:hover {
+    background: linear-gradient(135deg, #007c83, #00adb5);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Illustration IA (image à droite) */
+.image-content img {
+    max-width: 500px; /* Taille de l'image ajustée */
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Sur mobile, placer les éléments en colonne */
+        padding: 20px;
+    }
+
+    .logo-container {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .header-content {
+        margin-top: 20px;
+    }
+
+    .text-content h1 {
+        font-size: 2rem;
+    }
+
+    .text-content p {
+        font-size: 1.1rem;
+    }
+
+    .text-content .btn {
+        padding: 12px 25px;
+    }
+}
+
+/* Style du bouton */
+.btn {
+    background: linear-gradient(135deg, #00adb5, #007c83); /* Dégradé dynamique pour plus d'impact */
+    color: white; /* Texte blanc pour contraster avec la couleur du bouton */
+    font-size: 1.3rem; /* Texte plus grand pour augmenter la visibilité */
+    padding: 18px 35px; /* Plus d'espace pour rendre le bouton plus gros */
+    border: none; /* Pas de bordure pour un design épuré */
+    border-radius: 50px; /* Bordures arrondies pour un aspect plus moderne et doux */
+    cursor: pointer; /* Le curseur change pour une main lors du survol */
+    transition: all 0.4s ease; /* Transition douce pour les effets */
+    font-weight: 700; /* Texte plus épais pour plus d'impact */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour donner de la profondeur */
+}
+
+/* Effet au survol */
+.btn:hover {
+    background: linear-gradient(135deg, #007c83, #00adb5); /* Inverser les couleurs du dégradé pour un effet dynamique */
+    transform: translateY(-5px) scale(1.1); /* Légère animation de translation et d'agrandissement */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Ombre plus marquée pour un effet de flottement */
+    animation: bounce 0.3s ease; /* Animation de rebond pour ajouter du dynamisme */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre sur le texte pour plus de visibilité */
+}
+
+/* Animation de rebond (bounce effect) */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Légère montée */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Effet au focus (quand l'utilisateur clique ou sélectionne) */
+.btn:focus {
+    outline: none; /* Enlever le contour de focus par défaut */
+    box-shadow: 0 0 0 4px rgba(0, 173, 181, 0.7); /* Lueur douce autour du bouton */
 }
 
 .image-content img {
     max-width: 100%;
-    height: auto;
-    margin-right: 50px;
-    object-fit: contain; /* Assure une bonne mise à l'échelle de l'image */
+    width: 400px;
+    border-radius: 8px;
+    animation: slideIn 1s ease-out;
 }
 
-.header .title {
-    font-size: 3rem;
-    margin: 0;
-    animation: fadeInDown 1s ease-in-out;
-}
-
-.header .subtitle {
-    font-size: 1.5rem;
-    margin: 20px 0;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.header .btn {
-    text-decoration: none;
-    background: #ff7eb3;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 1rem;
-    animation: fadeInUp 2s ease-in-out;
-    transition: transform 0.3s;
-}
-
-.header .btn:hover {
-    transform: scale(1.1);
-    background-color: #ec4f91;
-    transition: background-color 0.3s;
-}
-
-.about {
-    background: #f4f4f4;
+/* Form Section */
+.form-section {
+    background: #fff;
     padding: 50px 20px;
-    text-align: center;
-}
-
-.about .section-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.about .cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    max-width: 300px;
-    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.form-container h2 {
+    font-size: 2.5rem;
+    color: #2c3e50; /* Bleu foncé */
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
-.footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.form-container p {
+    font-size: 1.1rem;
+    color: #555;
 }
 
-/* Newsletter Section */
-.newsletter .form {
+.pppp {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Form */
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 20px;
 }
 
-.newsletter input {
-    padding: 10px 15px;
+input {
+    padding: 12px;
+    width: 100%;
+    max-width: 400px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
-    width: 100%;
-    max-width: 300px;
+    transition: 0.3s ease-in-out;
 }
 
-.newsletter input:focus {
+input:focus {
     outline: none;
-    border-color: #ff7eb3;
+    border-color: #0066ff; /* Bleu vif */
 }
 
-.newsletter .btn {
-    padding: 10px 20px;
-    background: #ff7eb3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.newsletter .btn:hover {
-    background-color: #ec4f91;
-}
-
-.newsletter {
-    text-align: center;
-    background-color: #f4f4f4;
-}
-
-.form-message {
-    margin-top: 20px;
+/* Case RGPD */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     font-size: 1rem;
     color: #333;
 }
 
-/* RGPD Notice */
-.rgpd-notice {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #666;
-    text-align: center;
+.checkbox-container input {
+    width: 18px;
+    height: 18px;
 }
 
-.rgpd-notice .rgpd-link {
-    color: #2575fc;
+.rgpd-link {
+    color: #0066ff; /* Bleu vif */
     text-decoration: none;
     font-weight: bold;
 }
 
-.rgpd-notice .rgpd-link:hover {
+.rgpd-link:hover {
     text-decoration: underline;
 }
 
-/* Privacy Policy Section */
-.privacy-policy {
-    background: #f4f4f4;
-    padding: 50px 20px;
-    text-align: center;
+/* Footer */
+.footer {
+    background: linear-gradient(45deg, #0066ff, #ff7f50, #00adb5); /* Gradient avec des couleurs modernes */
+    background-size: 300% 300%;
+    animation: gradientBackground 10s ease infinite; /* Animation de changement de gradient */
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
 }
 
-.privacy-policy .section-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.privacy-policy .section-description {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #333;
-}
-
-.privacy-policy a {
-    color: #2575fc;
-    text-decoration: none;
-}
-
-.privacy-policy a:hover {
-    text-decoration: underline;
-}
-
-@keyframes fadeIn {
+/* Animations */
+@keyframes slideIn {
     from {
+        transform: translateX(-100%);
         opacity: 0;
     }
     to {
+        transform: translateX(0);
         opacity: 1;
     }
 }
 
-@keyframes fadeInDown {
+@keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(-20px);
@@ -225,13 +269,415 @@ body {
     }
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
     }
-    to {
+
+    .text-content {
+        text-align: center;
+    }
+
+    .image-content img {
+        width: 100%;
+    }
+
+    .form-section {
+        padding: 30px;
+    }
+}
+
+/* Global */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ecf0f1;
+    background: #f7f7f7; /* Fond gris foncé */
+    text-align: center;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(45deg, #0066ff, #ff7f50, #00adb5); /* Gradient avec des couleurs modernes */
+    background-size: 300% 300%;
+    animation: gradientBackground 10s ease infinite; /* Animation de changement de gradient */
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Header content */
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 70px;
+    z-index: 10;
+    margin-left: 15%;
+
+}
+
+.text-content {
+    max-width: 500px;
+    text-align: left;
+    font-size: 2rem;
+    padding: 30px;
+    margin-right: 10px;
+}
+
+.text-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    color: #ecf0f1;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #0066ff; /* Bleu vif */
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+
+}
+
+.btn:hover {
+    background-color: #0055cc;
+    transform: scale(1.05);
+}
+
+.image-content img {
+    max-width: 100%;
+    width: 400px;
+    border-radius: 8px;
+    animation: slideIn 1s ease-out;
+}
+
+/* SECTION TÉMOIGNAGES */
+.testimonials-section {
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    color: #16213e;
+    margin-bottom: 30px;
+}
+
+/* Conteneur de témoignages */
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 350px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-cards {
+    background: white;
+    padding: 30px;
+    max-width: 350px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-cards:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.testimonial-enterprise {
+    max-width: 200px;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+    padding: 10px;
+}
+
+.testimonial-enterprise:hover {
+    opacity: 1;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.testimonial-rating {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #f39c12; /* Couleur dorée pour les étoiles */
+}
+
+.star {
+    margin-right: 5px;
+}
+
+/* SECTION LOGOS */
+.logos-container {
+    margin-top: 40px;
+}
+
+.logos-container h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Animation de fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Animation de fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Détails */
+.details-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f7f9fc;
+    padding: 60px 20px;
+    color: #1d3557;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 40px;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease;
+}
+
+.details-section:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Liste des Détails avec icônes */
+.details-section .details-list {
+    list-style-type: none; /* Masque les points par défaut */
+    padding: 0;
+}
+
+.details-section .details-list li {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 35px; /* Espacement avec l'icône */
+    font-size: 2rem; /* Taille de la police plus grande */
+    line-height: 1.8;
+    color: #333;
+}
+
+.details-section .details-list li:before {
+    content: "✔️"; /* Icône de check */
+    font-size: 1.5rem; /* Taille de l'icône */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #00adb5; /* Couleur bleue */
+}
+
+/* Section Détails et Inscription */
+.details-form-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 50px 5%;
+    color: #333;
+}
+
+.details-container {
+    flex: 1;
+    margin-right: 40px;
+    max-width: 500px; /* Ajouter une largeur minimale pour éviter que le contenu devienne trop petit sur mobile */
+    margin-bottom: 3%;
+    margin-left: 15%;
+    text-align: left;
+}
+
+.details-container h2 {
+    font-size: 2rem;
+    color: #00adb5;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.details-container p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Formulaire d'inscription */
+.form-container {
+    flex: 1;
+    max-width: 450px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    color: #333;
+    transition: all 0.3s ease;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+.form-container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.form-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-container p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-container input,
+.form-container button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+}
+
+.form-container button {
+    background-color: #00adb5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #007c83;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .details-form-section {
+        flex-direction: column;
+        padding: 30px 10%;
+    }
+
+    .details-container {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .form-container {
+        max-width: 100%;
+    }
+
+    .form-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .form-container input,
+    .form-container button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .details-container h2 {
+        font-size: 2rem;
+    }
+
+    .details-section {
+        padding: 40px 10px;
+    }
+
+    .details-section .details-list li {
+        font-size: 1rem; /* Taille de police plus petite sur mobile */
+    }
+}
+
+.details-list {
+    padding: 10px;
 }

@@ -3,83 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoWa-Vation | Home</title>
+    <title>IA Trends | Webinaire 2025</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo.png">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2942/2942861.png">
 </head>
 <body>
-    <header class="header">
-        <div class="container header-content">
-            <div class="text-content">
-                <h1 class="title">Bienvenue sur NoWa-Vation !</h1>
-                <br>
-                <p class="subtitle">Découvrez nos services de création de site web incroyables et rejoignez-nous dès maintenant.</p>
-                <br>
-                <br>
-                <a href="#about" class="btn btn-primary">En savoir plus</a>
-            </div>
-            <div class="image-content">
-                <img src="logo.png" alt="Logo" style="width: 200px;">
-            </div>
-        </div>
-    </header>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">À propos de nous</h2>
-            <p class="section-description">Nous créons des expériences uniques grâce à des solutions innovantes et des designs modernes.</p>
-            <div class="cards">
-                <div class="card">
-                    <h3>Qualité</h3>
-                    <p>Des services de haute qualité, taillés sur mesure pour vos besoins.</p>
+        <!-- HEADER -->
+        <header class="header">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo de l'entreprise" class="logo">
+            </div>
+            <div class="header-content">
+                <div class="text-content">
+                    <h1>Webinaire exclusif : <br> Les tendances de l'IA en 2025</h1>
+                    <p>Découvrez les innovations qui vont révolutionner le monde de l’intelligence artificielle. <br> Ne manquez pas cette opportunité de rester en tête de l'innovation !</p>
+                    <a href="#form-section" class="btn">Je m'inscris</a>
                 </div>
-                <div class="card">
-                    <h3>Innovation</h3>
-                    <p>Des idées nouvelles pour chaque projet, à chaque étape.</p>
-                </div>
-                <div class="card">
-                    <h3>Support</h3>
-                    <p>Une équipe dédiée pour vous accompagner à tout moment.</p>
+                <div class="image-content">
+                    <img src="ia.png" alt="Illustration IA">
                 </div>
             </div>
-        </div>
+        </header>
+
+        <!-- SECTION DÉTAILS ET INSCRIPTION -->
+        <section id="details-form-section" class="details-form-section">
+            <div class="details-container">
+                <h2>Qu'allez-vous découvrir ?</h2>
+                <p class="intro-text">Rejoignez-nous pour découvrir les dernières tendances de l'IA :</p>
+                <ul class="details-list">
+                    <p>✔️ Les avancées majeures de l’IA en 2025</p>
+                    <p>✔️ Les applications pratiques de l'IA dans le développement logiciel</p>
+                    <p>✔️ Comment l’IA peut transformer l’industrie tech</p>
+                    <p>✔️ L'impact de l'IA sur la cybersécurité</p>
+                    <p>✔️ Et bien plus encore…</p>
+                </ul>
+                <p class="cta-text">Ne manquez pas ce webinaire interactif avec des experts de l'IA et posez toutes vos questions en direct !</p>
+            </div>
+
+            <div class="form-container">
+                <h2>Inscrivez-vous gratuitement</h2>
+                <p>Rejoignez-nous pour explorer les tendances majeures de l'IA qui vont transformer votre avenir professionnel !</p>
+
+                <form id="webinar-form">
+                    <input type="text" id="name" placeholder="Votre nom" required aria-label="Nom complet">
+                    <input type="email" id="email" placeholder="Votre email" required aria-label="Adresse email">
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="rgpd-checkbox" required aria-label="Accepter la politique de confidentialité">
+                        <label for="rgpd-checkbox">
+                            J'accepte la <a href="#" class="rgpd-link" title="Lire la politique de confidentialité">politique de confidentialité</a>.
+                        </label>
+                    </div>
+                
+                    <button type="submit" class="btn">Je m'inscris</button>
+                </form>
+            
+                <p id="form-message"></p>
+            </div>
+        </section>
+
+        <!-- SECTION TÉMOIGNAGES -->
+        <section id="testimonials" class="testimonials-section">
+            <h2>Ce que disent nos participants</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Photo de Marie Dupont" class="testimonial-avatar">
+                    <div class="testimonial-rating">
+                        <span class="star">&#9733;</span> <!-- Étoile pleine -->
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span> <!-- Étoile vide -->
+                    </div>
+                    <p class="testimonial-text">"Ce webinaire m'a permis de comprendre les dernières avancées en IA. Les intervenants étaient incroyables et les informations très pertinentes !" <br><strong>- Marie Dupont, CEO</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Photo de Pierre Martin" class="testimonial-avatar">
+                    <div class="testimonial-rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                    </div>
+                    <p class="testimonial-text">"Une expérience enrichissante qui m’a donné un aperçu précieux de l'avenir de l'intelligence artificielle. Très bien organisé." <br><strong>- Pierre Martin, Data Scientist</strong></p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Photo de Clara Lefevre" class="testimonial-avatar">
+                    <div class="testimonial-rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <p class="testimonial-text">"Un webinaire incontournable pour toute personne intéressée par l'IA. J'ai appris des informations clés et j'ai pu poser mes questions en direct." <br><strong>- Clara Lefevre, Product Manager</strong></p>
+                </div>
+            </div>   
     </section>
 
-    <section id="newsletter" class="newsletter">
-        <div class="container">
-            <h2 class="section-title">Inscrivez-vous à notre newsletter</h2>
-            <p class="section-description">Restez informé(e) des dernières actualités et offres exclusives en vous inscrivant à notre newsletter.</p>
-            <form id="newsletter-form" class="form">
-                <input type="text" id="firstname" name="firstname" placeholder="Entrez votre prénom" required>
-                <input type="text" id="lastname" name="lastname" placeholder="Entrez votre nom" required>
-                <input type="text" id="pseudo" name="pseudo" placeholder="Entrez votre pseudo" required>
-                <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
-                <button type="submit" class="btn btn-primary">S'inscrire</button>
-            </form>
-            <p id="form-message" class="form-message"></p>
-            <p class="rgpd-notice">Nous respectons la <a href="#privacy-policy" class="rgpd-link">réglementation RGPD</a>. Vos données resteront confidentielles et ne seront utilisées que pour nos communications liées à la newsletter.</p>
-            <section id="privacy-policy" class="privacy-policy">
-                <div class="container">
-                    <h2 class="section-title">Politique de Confidentialité</h2>
-                    <p class="section-description">
-                        Conformément à la réglementation RGPD, nous nous engageons à protéger vos données personnelles.
-                        Vos informations seront utilisées uniquement pour vous fournir des communications pertinentes
-                        et ne seront jamais partagées avec des tiers sans votre consentement explicite.
-                    </p>
-                    <p>
-                        Si vous souhaitez en savoir plus sur la gestion de vos données ou exercer vos droits (accès,
-                        rectification, suppression, etc.), vous pouvez nous contacter à l'adresse suivante :
-                        <a href="mailto:contact@votresite.com">contact-info@nowa-vation.com</a>.
-                    </p>
-                </div>
-            </section>
-        </div>
-    </section>     
-    
+    <section id="testimonials" class="testimonials-section">
+        <h2>Nos partenaires</h2> 
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <img src="woit.png" class="testimonial-enterprise">
+            </div>
+            <div class="testimonial-card">
+                <img src="sony.png"class="testimonial-enterprise">
+            </div>
+            <div class="testimonial-card">
+                <img src="amazon.png" class="testimonial-enterprise">
+            </div>
+        </div>       
+    </section>
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <p>© 2024 NoWa-FTN. Tous droits réservés.</p>
-        </div>
+        <p>© 2025 NoWa-Vation. Tous droits réservés.</p>
     </footer>
 
     <script src="script.js"></script>
